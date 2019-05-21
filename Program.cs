@@ -8,29 +8,19 @@ using FindImagesTest;
 
 class Program
 {
-
     static int Factorial(int x)
     {
-        static int Factorial(int x)
-        {
-            if (x == 0)
-                return 1;
-            return x * Factorial(x - 1);
-        }
-
-        static void Main(string[] args)
-        {
-            System.Console.WriteLine("Hello world");
-            System.Console.WriteLine("Mish commit");
-            System.Console.WriteLine(Factorial(5));
-
-           
-            
-        }
+        if (x == 0)
+            return 1;
+        return x * Factorial(x - 1);
     }
 
     public static void Main(string[] args)
     {
+        System.Console.WriteLine("Hello world");
+        System.Console.WriteLine("Mish commit");
+        System.Console.WriteLine(Factorial(5));
+
         Student Valera = new Student { Name = "Valera", Surname = "Mashina", Age = 67 };
         Student Bogdan = new Student { Name = "Bogdan", Surname = "GP", Age = 17 };
         Student Sasha = new Student { Name = "Sasha", Surname = "Brat", Age = 18 };
@@ -47,6 +37,7 @@ class Program
             Console.WriteLine($"Name: {student.Name} \t Surname:{student.Surname}\t Age:{student.Age}");
         }
         
+        //Simirenko
         List<string> stringList = new List<string>() { "string1", "string2", "string3" };
         stringList.Add("string4");
         foreach (var i in stringList)
@@ -83,23 +74,10 @@ class Program
         {
             Console.WriteLine(item);
         }
-
-        System.Console.WriteLine("Hello world");
-        System.Console.WriteLine("Mish commit");
-        System.Console.WriteLine(Factorial(5));
-
-
         List<Car> cars = Car.GetCars();
         foreach (Car item in cars)
         {
             Console.WriteLine($"{item.Title} ");
         }
-
-        Console.WriteLine(FactorialPy("1.py", "5"));
-        
-
-
     }
-   
-    
 }
