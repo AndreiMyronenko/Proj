@@ -16,50 +16,13 @@ class Program
             return x * Factorial(x - 1);
         }
 
-        class ListOfStrings : IStringList
-        {
-            List<string> stringList = new List<string>();
-
-            public void Add(string line)
-            {
-                stringList.Add(line);
-            }
-            public void Delete(string line)
-            {
-                stringList.Remove(line);
-            }
-
-            public IEnumerator<string> GetEnumerator()
-            {
-                throw new NotImplementedException();
-            }
-
-            public void Print()
-            {
-                foreach (var i in stringList)
-                {
-                    Console.WriteLine(i);
-                }
-            }
-
-            IEnumerator IEnumerable.GetEnumerator()
-            {
-                throw new NotImplementedException();
-            }
-        }
-
         static void Main(string[] args)
         {
             System.Console.WriteLine("Hello world");
             System.Console.WriteLine("Mish commit");
             System.Console.WriteLine(Factorial(5));
 
-            List<string> stringList = new List<string>() { "string1", "string2", "string3" };
-            stringList.Add("string4");
-            foreach (var i in stringList)
-            {
-                Console.WriteLine(i);
-            }
+           
             
         }
     }
@@ -81,8 +44,14 @@ class Program
         {
             Console.WriteLine($"Name: {student.Name} \t Surname:{student.Surname}\t Age:{student.Age}");
         }
-
-
+        
+        List<string> stringList = new List<string>() { "string1", "string2", "string3" };
+        stringList.Add("string4");
+        foreach (var i in stringList)
+        {
+            Console.WriteLine(i);
+        }
+    }
 
     private static dynamic FactorialPy(string pyFile, string arg)
     {
@@ -126,6 +95,7 @@ class Program
         System.Console.WriteLine("Mish commit");
         System.Console.WriteLine(Factorial(5));
         Console.WriteLine(FactorialPy("1.py", "5"));
+        
 
     }
 }
