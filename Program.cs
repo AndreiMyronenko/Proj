@@ -14,9 +14,19 @@ class Program
         return x * Factorial(x - 1);
     }
 
-    private static IDownloader _downloader = new ImageDownloader();
+    private static dynamic FactorialPy(string pyFile, string arg)
+    {
+        int x = int.Parse(arg);
 
-    private static void DownloadImageDemonstation()
+        ScriptEngine engine = Python.CreateEngine();
+        ScriptScope scope = engine.CreateScope();
+
+        engine.ExecuteFile(pyFile, scope);
+        dynamic function = scope.GetVariable("factorial");
+        dynamic result = function(x);
+        return result;
+    }
+    public static void Main(string [] args)
     {
         string path = "https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Shaqi_jrvej.jpg/1200px-Shaqi_jrvej.jpg";
         DownloadImageAsync(path);
@@ -47,20 +57,6 @@ class Program
         System.Console.WriteLine("Hello world");
         System.Console.WriteLine("Mish commit");
         System.Console.WriteLine(Factorial(5));
-
-
-        try
-        {
-            string text = "kek";
-            text.DeserializeObjectCollection<int>();
-        }
-        catch (Exception ex)
-        {
-            Console.WriteLine(ex.Message);
-        }
-
-        DownloadImageDemonstation();
-        Console.ReadKey();
-
+        Console.WriteLine(FactorialPy("1.py", "5"));
     }
 }
