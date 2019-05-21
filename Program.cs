@@ -12,6 +12,9 @@ class Program
     }
     public static void Main(string[] args)
     {
+        Console.WriteLine("Hello world");
+        Console.WriteLine("Mish Commit");
+        Console.WriteLine(Factorial(5));
         Student Valera = new Student { Name = "Valera", Surname = "Mashina", Age = 67 };
         Student Bogdan = new Student { Name = "Bogdan", Surname = "GP", Age = 17 };
         Student Sasha = new Student { Name = "Sasha", Surname = "Brat", Age = 18 };
