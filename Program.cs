@@ -1,5 +1,5 @@
 using System;
-
+using FindImagesTest;
 
 class Program
 {
@@ -27,11 +27,26 @@ class Program
 
     public static void Main(string[] args)
     {
+
+        Process();
+        Console.ReadKey();
+    }
+
+    static async void Process()
+    {
+        IImagePathFinder finder = new ImagePathFinder("/Users/leonid/Downloads");
+        await finder.FindAsync();
+        foreach (var item in finder.Result)
+        {
+            Console.WriteLine(item);
+        }
+
         System.Console.WriteLine("Hello world");
         System.Console.WriteLine("Mish commit");
         System.Console.WriteLine(Factorial(5));
 
         DownloadImageDemonstation();
         Console.ReadKey();
+
     }
 }
