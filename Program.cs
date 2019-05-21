@@ -1,24 +1,6 @@
 using System;
 using System.Collections.Generic;
-
-
-public interface IStudent
-{
-    string Name { get; set; }
-    string Surname { get; set; }
-    int Age { get; set; }
-}
-
-
-public class Student : IStudent
-{
-    public string Name { get; set; }
-    public string Surname { get; set; }
-    public int Age { get; set; }
-
-
-}
-
+using Student;
 
 class Program
 {
