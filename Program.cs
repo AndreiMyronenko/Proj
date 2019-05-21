@@ -1,5 +1,8 @@
+using forkRepo;
 using System;
+using System.Collections.Generic;
 using FindImagesTest;
+
 
 class Program
 {
@@ -44,6 +47,17 @@ class Program
         System.Console.WriteLine("Hello world");
         System.Console.WriteLine("Mish commit");
         System.Console.WriteLine(Factorial(5));
+
+
+        try
+        {
+            string text = "kek";
+            text.DeserializeObjectCollection<int>();
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine(ex.Message);
+        }
 
         DownloadImageDemonstation();
         Console.ReadKey();
