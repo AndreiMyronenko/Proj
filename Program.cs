@@ -1,8 +1,10 @@
 using forkRepo;
 using System;
+using Mawinka;
 using System.Collections.Generic;
 using Student;
 using FindImagesTest;
+
 
 class Program
 {
@@ -54,15 +56,6 @@ class Program
         Console.WriteLine($"{_downloader.Filename}");
     }
 
-    public static void Main(string[] args)
-    {
-
-        string path = "https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Shaqi_jrvej.jpg/1200px-Shaqi_jrvej.jpg";
-        DownloadImageAsync(path);
-        Process();
-        Console.ReadKey();
-    }
-
     static async void Process()
     {
         IImagePathFinder finder = new ImagePathFinder("/Users/leonid/Downloads");
@@ -75,7 +68,18 @@ class Program
         System.Console.WriteLine("Hello world");
         System.Console.WriteLine("Mish commit");
         System.Console.WriteLine(Factorial(5));
+
+
+        List<Car> cars = Car.GetCars();
+        foreach (Car item in cars)
+        {
+            Console.WriteLine($"{item.Title} ");
+        }
+
         Console.WriteLine(FactorialPy("1.py", "5"));
 
+
     }
+   
+    
 }
