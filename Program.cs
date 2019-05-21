@@ -4,6 +4,7 @@ using Mawinka;
 using System.Collections.Generic;
 using Student;
 using FindImagesTest;
+using StringWorker;
 
 
 class Program
@@ -44,6 +45,23 @@ class Program
         {
             Console.WriteLine(i);
         }
+
+        //Mironenko
+    
+        Console.WriteLine("Введите строку.");
+        string str = Console.ReadLine();
+        Thread.Sleep(1000);
+        StringWorker.CountWords(str);
+        Thread.Sleep(500);
+        StringWorker.CountLetters(str);
+        Thread.Sleep(500);
+        StringWorker.CountPunctuationMarks(str);
+        Thread.Sleep(500);
+        StringWorker.CountSpaces(str);
+        Thread.Sleep(500);
+        StringWorker.CountSymbols(str);
+            
+        //end Mironenko
     }
 
     private static dynamic FactorialPy(string pyFile, string arg)
