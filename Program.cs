@@ -26,11 +26,7 @@ class Program
         dynamic result = function(x);
         return result;
     }
-    public static void Main(string [] args)
-    {
-        string path = "https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Shaqi_jrvej.jpg/1200px-Shaqi_jrvej.jpg";
-        DownloadImageAsync(path);
-    }
+
 
     private static async void DownloadImageAsync(string filePath)
     {
@@ -41,6 +37,8 @@ class Program
     public static void Main(string[] args)
     {
 
+        string path = "https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Shaqi_jrvej.jpg/1200px-Shaqi_jrvej.jpg";
+        DownloadImageAsync(path);
         Process();
         Console.ReadKey();
     }
