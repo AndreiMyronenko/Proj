@@ -1,25 +1,8 @@
-using Newtonsoft.Json;
+using forkRepo;
 using System;
 using System.Collections.Generic;
 
-static class Extention
-{
-    public static IEnumerable<T> DeserializeObjectCollection<T>(this string str)
-    {
-        List<T> result = null;
 
-        try
-        {
-            result = JsonConvert.DeserializeObject<List<T>>(str);
-        }
-        catch (JsonReaderException jrex)
-        {
-            throw jrex;
-        }
-
-        return result;
-    }
-}
 
 class Program
 {
