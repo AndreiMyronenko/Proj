@@ -65,7 +65,7 @@ class Program
         List<Car> cars = Car.GetCars();
         foreach (Car item in cars)
         {
-            Console.WriteLine($"{item.Title} {item.Price}");
+            Console.WriteLine($"{item.Title} ");
         }
     }
    
