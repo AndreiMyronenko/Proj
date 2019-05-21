@@ -4,23 +4,27 @@ using System;
 class Program
 {
 
-    // json Save
-    public static void JsonSave<T>(IEnumerable<T> collection)
+   
+      class  WorkWithJson<T> 
     {
-
-        string data = JsonConvert.SerializeObject(collection);
-        File.WriteAllText("Data.json", data);
-    }
-
-    // json Load
-    public static IEnumerable<T> JsonLoad<T>()
-    {
-        if (File.Exists("Data.json"))
+        // json Save
+        public void JsonSave(IEnumerable<T> collection)
         {
-            return JsonConvert.DeserializeObject<IEnumerable<T>>(File.ReadAllText("Data.json"));
 
+            string data = JsonConvert.SerializeObject(collection);
+            File.WriteAllText("Data.json", data);
         }
-        return null;
+
+        // json Load
+        public IEnumerable<T> JsonLoad()
+        {
+            if (File.Exists("Data.json"))
+            {
+                return JsonConvert.DeserializeObject<IEnumerable<T>>(File.ReadAllText("Data.json"));
+
+            }
+            return null;
+        }
     }
 
     static int Factorial(int x)
