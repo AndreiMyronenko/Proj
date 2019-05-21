@@ -26,9 +26,6 @@ namespace DK_Prikolchik
             return newMes.ToString();
         }
 
-        //public static string Decrypt(string Mes, int key = 1)
-        //{
-
-        //}
+        public static string Decrypt(string Mes, int key = 1) => Encrypt(Mes, -key);
     }
 }
